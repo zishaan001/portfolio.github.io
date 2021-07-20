@@ -1,0 +1,533 @@
+
+/*RESET ALL MARGINS AND PADDINGS*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: sans-serif;
+    
+   
+}
+#maincontainer {
+    background-image: url('images/bg.png');
+    background-size:contain;
+    background-origin:border-box
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.item {
+    height: 200px;
+    width: 32%;
+    padding-top: 15px;
+    position: relative;
+    transition: 0.50s;
+    overflow: hidden
+}
+
+.item .demo-text h2{
+    position: absolute;
+    z-index: 1;
+    transform: translate(-50%,-50%);
+    top: 35%;
+    left:-50%;
+    color: white;
+    transition: 0.25s;
+}
+.item .demo-text span {
+    color: white;
+    z-index: 1;
+    display: inline-block;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 60%;
+    right: -50%;
+    transition: 0.25s;
+}
+.item .demo-text:hover h2 {
+    font-size: 50px;
+    left: 50%;
+}
+.item .demo-text:hover .demo-word {
+     font-size: 20px;
+     right:40%;
+}
+
+
+/*******************ALL THE SECTION HEADING STYLING**********************/
+.section-heading {
+    padding: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 3rem;
+    color: #062D4C
+}
+
+p{
+    padding:0px;
+    margin:0px
+}
+/***********************************************************************/
+
+/**************************NAVIGATION BAR*******************************/
+.navbar {
+    transition: 0.45s;
+    height: 65px;
+    box-shadow: 0px 0px 7px 1px;
+}
+.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.scrolling-active {
+    background-color: #062D4C
+}
+.nav-item {
+    height: 50px;
+    
+  }
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+    padding: 16px 30px;
+    border-radius: 5px;
+    font-variant: small-caps;
+    background-color: transparent;
+    height: 30px;
+    display: inline;
+    vertical-align: -webkit-baseline-middle;
+    line-height:55px
+}
+
+.nav-link:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 5%;
+    background-color: transparent;
+    border-top: 3px solid red;
+    border-bottom:3px solid red;
+    transform: translateY(-100px);
+    transition: 0.5s
+}
+.nav-link:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-color: red;
+    display: block;
+    top: 8%;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.nav-link:hover::before {
+    transform: translateY(4px)
+}
+.nav-link:hover::after {
+    width: 20%;
+    background: linear-gradient(69deg, rgba(42,85,201,1) 20%, rgba(69,160,213,1) 36%, rgba(52,114,205,1) 69%, rgba(69,160,213,1) 84%, rgba(69,160,213,1) 100%);
+    border-radius: 5px;
+    transform: scale(1,1);
+}
+/************END************/
+
+
+
+/***********************BANNER STYLING**************************/
+.hero-image {
+    padding: 0px;
+    position: relative;
+    background-image: url('images/model2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 600px;
+    text-align: center;
+    text-transform: uppercase
+}
+.hero-text {
+    color: black;
+    font-size: 4vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*********************BANNER BUTTONS***********************/
+.hero-text #cv, #hireme {
+    min-width: 11%;
+    width: 15vw;
+    height: auto;
+    font-size: 2vw;
+    border-radius: 5px
+}
+
+button{
+    position:relative;
+    transition:0.5s;
+    background-color:transparent;
+    border:1px solid black
+}
+button::before {
+   content: "";
+   position: absolute;
+   top:0;
+   left: 0;
+   height: 100%;
+   width: 0%;
+   background: linear-gradient(69deg, rgba(42,85,201,1) 20%, rgba(69,160,213,1) 36%, rgba(52,114,205,1) 69%, rgba(69,160,213,1) 84%, rgba(69,160,213,1) 100%);
+   transition: 0.7s;
+   z-index: -1;
+   border-radius: 5px;
+}
+button:hover::before {
+    width: 100%;
+}
+button:hover{
+    color:white;
+    border:1px solid black
+}
+button:hover{
+    background-color: transparent;
+}
+/*************END*************/
+
+
+/************************ABOUT SECTION***************************/
+#about .row #col2 {
+    background-color: #062D4C;
+    color: white;
+    padding:20px;
+}
+#abtrow2 {
+    position: absolute;
+    top: 101%;
+    left: 0%;
+    width: 100%;
+}
+.about-image {
+    width: 100%;
+    height: 500px;
+    box-shadow: -5px 10px 10px #062D4C;
+}
+.about-text {
+    font-size: 1vw  
+}
+.skill-bar span {
+    font-size: 2vh
+}
+/**********END*************/
+
+
+
+/**************************SKILLS DIV************************/
+.skill-bar #html {
+    width: 90%;
+    height: 10px;
+    background-color: #3BF0CF;
+    border-radius: 5px;
+    box-shadow: 20px 0px 0px #fff
+}
+.skill-bar #css {
+    width: 85%;
+    height: 10px;
+    background-color: #49CFE0;
+    border-radius: 5px;
+    box-shadow: 46px 0px 0px #fff
+}
+.skill-bar #bootstrap {
+    width: 80%;
+    height: 10px;
+    background-color: #49CFE0;
+    border-radius: 5px;
+    box-shadow: 71px 0px 0px #fff
+}
+.skill-bar #asp {
+    width: 75%;
+    height: 10px;
+    background-color: #49CFE0;
+    border-radius: 5px;
+    box-shadow: 96px 0px 0px #fff
+}
+.skill-bar #mssql {
+    width: 55%;
+    height: 10px;
+    background-color: #49CFE0;
+    border-radius: 5px;
+    box-shadow: 200px 0px 0px #fff
+}
+.skill-bar .percent {
+    float: right;
+    color: #062D4C;
+    background-color: #fff;
+    margin-top: 14px;
+    font-size: 2vh;
+    width: 30px;
+    height: 17px;
+    text-align: center;
+    font-weight:bolder
+}
+/*********END****************/
+
+/********HIRE ME AND DOWNLOAD CV BUTTONS*********/
+
+.buttons-div #btn1, #btn2 {
+    font-size: 2vh;
+    height: 50px;
+    border-radius: 33px;
+    border: none;
+}
+.buttons-div #btn1 {
+    width: 20%;
+}
+.buttons-div #btn2 {
+    width: 25%;
+}
+/**************END**************/
+
+/**********PORTFOLIO SECTION*********/
+.div-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.image {
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    transition: 0.2s
+}
+
+#portfolio > .div-flex .item::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    z-index: 1;
+    height: 5px;
+    background-color: #157347;
+    transition: 0.1s
+}
+
+#portfolio > .div-flex .item::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    z-index: 1;
+    height: 5px;
+    background-color: #157347;
+    transition: 0.1s
+}
+
+#portfolio > .div-flex .item:hover::before, .item:hover::after {
+    width: 100%;
+}
+
+#portfolio .div-flex .item:hover {
+    transform: scale(1.1);
+}
+
+#portfolio .div-flex .item:hover .image {
+    filter: blur(5px);
+}
+
+/*************************SERVICES  SECTION********************/
+#services > .div-flex .item {
+    height:460px;
+    width: 25%;
+    transition: 0.25s;
+    box-shadow: 0px 0px 10px;
+    background-color: #062D4C;
+    color: white
+}
+
+#services .div-flex .item:hover {
+    background-color: #198754;
+    color: black;
+    background-color: #49CFE0
+}
+
+#services .div-flex .item p {
+    text-align: center;
+    padding: 20px 20px;
+    font-size: 1.5vw
+}
+.services-text::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    right: 0px
+}
+
+.services-text h2 {
+    font-size: 2vw
+}
+
+/*Image icons*/
+.icons {
+    height: auto;
+    width: 35%;
+    margin: 10% 32%;
+}
+
+/**********END***********/
+
+
+/*********CONTACT SECTION**************/
+.label-wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.input-wrapper {
+    padding: 20px 0px;
+}
+.label {
+    font-size: 3vh;
+    color: #062D4C;
+}
+.input_field {
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 0px 0px 0px 5px;
+    font-size: 2.5vh;
+    border-radius:5px;
+    background-color:transparent
+}
+.input_field:focus {
+    outline: none;
+}
+.btn-success {
+    width: 25%;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    background-color:transparent;
+    color:black
+}
+.contact-ul {
+    list-style-type: none;
+    padding: 0px;
+}
+.contact-li {
+    text-decoration: none;
+    color: black;
+    padding-bottom: 30px
+}
+#about, #portfolio, #services, #contact {
+    margin-top: 50px
+}
+#contact .input-wrapper .label-wrapper .fas {
+    color: red;
+    display:none
+}
+
+/*Google Map*/
+.col-sm-6 iframe {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 70%
+}
+
+/*Contct form button*/
+.button-success {
+    width: 20%;
+    height: 10%;
+    background-color: #062D4C;
+    color:white;
+    margin-bottom: 30px;
+    border-radius:5px;
+    transition: 0.10s;
+    border: none;
+    outline: none;
+    transition:0.5s
+}
+.button-success:hover {
+   background: linear-gradient(69deg, rgba(42,85,201,1) 20%, rgba(69,160,213,1) 36%, rgba(52,114,205,1) 69%, rgba(69,160,213,1) 84%, rgba(69,160,213,1) 100%);
+   transform:translateX(20px);
+   color: white;
+   border-radius: 5px;
+}
+
+/*********END************/
+
+/********FOOTER SECTION***************/
+#footer-container {
+    background-color: #062D4C;
+    text-align: justify;
+    padding-top: 50px;
+}
+
+.footer-h3 {
+    padding: 10px 0px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    color: white;
+    text-align: justify;
+}
+.footer-ul {
+    list-style-type: none;
+    padding: 0px;
+    color:white;
+    text-align:justify
+}
+.footer-li{
+    padding-bottom:10px
+}
+
+.footer-li a {
+    text-decoration: none;
+    color: white;
+}
+
+.link {
+    width: 18%;
+    padding-top: 5px;
+    float: left
+}
+/***********END*********/
+
+
+/*************Footer Social Links*************/
+
+.fa-facebook:hover, .fa-google-plus:hover, .fa-instagram:hover, .fa-twitter:hover, .fa-linkedin-in:hover {
+    transform: scale(1.5);
+    transform: rotate(360deg);
+    color: #3b5998;
+    font-size: 2rem
+}
+
+.fa-facebook, .fa-google-plus, .fa-instagram, .fa-twitter, .fa-linkedin-in {
+    transition: 0.5s;
+}
+ 
+.services-text{
+    text-align:center;
+}
+.tab {
+    display: inline;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto;
+    font-size: .875em;
+    padding-left: 10px;
+}
+
+
+.fas, .far {
+    color: peachpuff
+}
+
+/**************End**************/
+
+
